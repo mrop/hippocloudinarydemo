@@ -59,6 +59,11 @@
       <groupId>org.onehippo.forge</groupId>
       <artifactId>resource-bundle-editor-plugin</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.cloudinary</groupId>
+      <artifactId>cloudinary</artifactId>
+      <version>${cloudinary.version}</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>cms</finalName>

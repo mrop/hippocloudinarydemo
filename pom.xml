@@ -59,6 +59,7 @@
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
 
   <properties>
+    <cloudinary.version>1.0.14</cloudinary.version>
 
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
