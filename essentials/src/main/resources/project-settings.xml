@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+  <projectNamespace>hippocloudinarydemo</projectNamespace>
+  <confirmParams>false</confirmParams>
+  <selectedBeansPackage>org.onehippo.beans</selectedBeansPackage>
+  <selectedComponentsPackage>org.onehippo.components</selectedComponentsPackage>
+  <selectedRestPackage>org.onehippo.rest</selectedRestPackage>
+  <setupDone>false</setupDone>
+  <templateLanguage>freemarker</templateLanguage>
+  <useSamples>true</useSamples>
+</project>
