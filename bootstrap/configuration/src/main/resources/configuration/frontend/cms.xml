@@ -38,7 +38,7 @@
           <sv:value>sepia</sv:value>
         </sv:property>
         <sv:property sv:name="gravity" sv:type="String">
-          <sv:value>faces</sv:value>
+          <sv:value>face</sv:value>
         </sv:property>
         <sv:property sv:name="height" sv:type="Long">
           <sv:value>60</sv:value>
