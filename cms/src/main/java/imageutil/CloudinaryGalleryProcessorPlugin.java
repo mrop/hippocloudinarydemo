@@ -13,29 +13,29 @@ import org.slf4j.LoggerFactory;
 import imageutil.plugin.CloudinaryService;
 
 
-class CloudinaryGalleryProcessorPlugin extends Plugin {
+public class CloudinaryGalleryProcessorPlugin extends Plugin {
 
     private static final Logger log = LoggerFactory.getLogger(CloudinaryGalleryProcessorPlugin.class);
 
-    private static final String CONFIG_PARAM_WIDTH = "width";
-    private static final String CONFIG_PARAM_HEIGHT = "height";
-    private static final String CONFIG_PARAM_CROP = "crop";
-    private static final String CONFIG_PARAM_EFFECT = "effect";
-    private static final String CONFIG_PARAM_GRAVITY = "gravity";
+    protected static final String CONFIG_PARAM_WIDTH = "width";
+    protected static final String CONFIG_PARAM_HEIGHT = "height";
+    protected static final String CONFIG_PARAM_CROP = "crop";
+    protected static final String CONFIG_PARAM_EFFECT = "effect";
+    protected static final String CONFIG_PARAM_GRAVITY = "gravity";
 
-    private static final int DEFAULT_WIDTH = 0;
-    private static final int DEFAULT_HEIGHT = 0;
+    protected static final int DEFAULT_WIDTH = 0;
+    protected static final int DEFAULT_HEIGHT = 0;
 
 
     @SuppressWarnings("WeakerAccess")
     public CloudinaryGalleryProcessorPlugin(final IPluginContext context, final IPluginConfig config) {
         super(context, config);
         final GalleryProcessor processor = createCloudinaryGalleryProcessor(config);
-        final String id = config.getString("gallery.processor.id", "gallery.processor.service");
+        final String id = config.getString("gallery.processor.id", "service.cloudinary.gallery.processor");
         context.registerService(processor, id);
     }
 
-    CloudinaryGalleryProcessor createCloudinaryGalleryProcessor(IPluginConfig config) {
+    protected CloudinaryGalleryProcessor createCloudinaryGalleryProcessor(IPluginConfig config) {
         final CloudinaryGalleryProcessor processor = new CloudinaryGalleryProcessor();
 
         CloudinaryService service = getPluginContext().getService(getPluginConfig().getString("cloudinary.service.id",

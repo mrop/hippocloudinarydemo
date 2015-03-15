@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-class CloudinaryGalleryProcessor extends AbstractGalleryProcessor {
+public class CloudinaryGalleryProcessor extends AbstractGalleryProcessor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CloudinaryGalleryProcessor.class);
 
@@ -44,8 +44,8 @@ class CloudinaryGalleryProcessor extends AbstractGalleryProcessor {
      * @return the previous scaling parameters of the resource node with the given name, or <code>null</code> if no
      * previous scaling parameters existed.
      */
-    public void addScalingParameters(String nodeName, CloudinaryScalingParameters parameters) {
-        cloudinaryParametersMap.put(nodeName, parameters);
+    public CloudinaryScalingParameters addScalingParameters(String nodeName, CloudinaryScalingParameters parameters) {
+        return cloudinaryParametersMap.put(nodeName, parameters);
     }
 
     /**
